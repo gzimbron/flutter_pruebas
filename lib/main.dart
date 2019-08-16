@@ -18,10 +18,27 @@ class MiHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Base'),
+        title: Text('Row'),
       ),
       body: Center(
-        child: Text("Aplicación Base"),
+        child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.thumb_up),
+                color: Colors.green,
+                onPressed: (){},
+              ),
+              RaisedButton(
+                child: Text("Botón"),
+                onPressed: () {},
+              ),
+              FittedBox(
+                fit: BoxFit.contain, 
+                child: const FlutterLogo(),
+              ),
+            ],
+          ),
       ),
     );
   }
